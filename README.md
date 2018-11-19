@@ -1,4 +1,4 @@
-﻿ # CRYPTOSUDO | CORE 0.12.3.4
+﻿ # CRYPTOSUDO | CORE 0.12.3.5
 ![CryptoSudo](https://cryptosudo.eu/img/favicon.png)
 
 ## What is CryptoSudo
@@ -23,13 +23,13 @@ Our ecosystem will be a central development and education platform for Blockchai
 | P2P Port - Testnet | 11920 |
 | Block Time | 180 seconds |
 | Block Size | 2MB |
-| Block Reward | 180 SUDO (One Hundred Eighty) |
+| Block Reward | 30 SUDO (Thirty) |
 | Maturity | 15 Blocks |
 | Send Confirmation | 6 Blocks |
 | Masternode Collateral | 50.000 SUDO (Fifty Thousand) |
 | Masternode Confirmation | 15 Blocks |
-| Masternode Reward | 45% of Block Reward |
-| PoW Reward | 50% of Block Reward |
+| Masternode Reward | 70% of Block Reward |
+| PoW Reward | 25% of Block Reward |
 | Treasury Fund | 5% of Block Reward |
 | Premine | 5% of Total Supply |
 | Protocol Support | IPV4, IPV6, TOR |
