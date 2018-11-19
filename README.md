@@ -39,12 +39,33 @@ Our ecosystem will be a central development and education platform for Blockchai
 First 7200 bloks, reward is 1 SUDO
 ```
 ```sh
-Between 7200 & 14400 bloks, reward is 30 SUDO
+Between 7200 & 8640 bloks, reward is 30 SUDO
 ```
 
 ```sh
-After 14400. blok, reward is 180 SUDO
+Between 8640 & 23040 bloks, reward is 9 SUDO
 ```
+
+```sh
+Between 23040 & 80640 bloks, reward is 90 SUDO
+```
+
+```sh
+Between 80640 & 138240 bloks, reward is 75 SUDO
+```
+
+```sh
+Between 138240 & 195840 bloks, reward is 60 SUDO
+```
+
+```sh
+Between 195840 & 282240 bloks, reward is 45 SUDO
+```
+
+```sh
+After 282240. blok, reward is 30 SUDO
+```
+
 
 ## Links
 > Web Site : [https://cryptosudo.eu](https://cryptosudo.eu/)
