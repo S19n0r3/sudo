@@ -1284,15 +1284,20 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
     CAmount nSubsidyBase;
     if (nPrevHeight == 0) {nSubsidyBase = 15000000;} // %5 of Total Supply | Premined
     if ((nPrevHeight > 0) && (nPrevHeight <= 7200)) {nSubsidyBase = 1;} // First 7200 bloks, reward is 1 SUDO
-    if ((nPrevHeight > 7200) && (nPrevHeight <= 14400)) {nSubsidyBase = 30;} // Between 7200 & 14400 bloks, reward is 30 SUDO
-    if (nPrevHeight > 14400) {nSubsidyBase = 180;} // After 14400. blok, reward is 180 SUDO
+    if ((nPrevHeight > 7200) && (nPrevHeight <= 8640)) {nSubsidyBase = 30;} // Between 7200 & 8640 bloks, reward is 30 SUDO
+    if ((nPrevHeight > 8640) && (nPrevHeight <= 23040)) {nSubsidyBase = 9;} // Between 8640 & 23040 bloks, reward is 9 SUDO - 1 Month
+    if ((nPrevHeight > 23040) && (nPrevHeight <= 80640)) {nSubsidyBase = 90;} // Between 23040 & 80640 bloks, reward is 90 SUDO - 4 Months
+    if ((nPrevHeight > 80640) && (nPrevHeight <= 138240)) {nSubsidyBase = 75;} // Between 80640 & 138240 bloks, reward is 75 SUDO - 4 Months
+    if ((nPrevHeight > 138240) && (nPrevHeight <= 195840)) {nSubsidyBase = 60;} // Between 138240 & 195840 bloks, reward is 60 SUDO - 4 Months
+    if ((nPrevHeight > 195840) && (nPrevHeight <= 282240)) {nSubsidyBase = 45;} // Between 195840 & 282240 bloks, reward is 45 SUDO - 6 Months
+    if (nPrevHeight > 282240) {nSubsidyBase = 30;} // After 282240. blok, reward is 30 SUDO
 
     // LogPrintf("height %u diff %4.2f reward %d\n", nPrevHeight, dDiff, nSubsidyBase);
     CAmount nSubsidy = nSubsidyBase * COIN;
 
-    // Decline of production by 20% per 3 years.
+    // Decline of production by 5% per 10 years.
     for (int i = consensusParams.nSubsidyHalvingInterval; i <= nPrevHeight; i += consensusParams.nSubsidyHalvingInterval) {
-      nSubsidy -= nSubsidy/5;
+      nSubsidy -= nSubsidy/20;
     }
 
     // Hard fork to reduce the block reward by 5 extra percent (allowing budget/superblocks)
@@ -1303,7 +1308,7 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
 
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
   {
-    CAmount ret = (blockValue/100)*45; // MN Reward: %45
+    CAmount ret = (blockValue/100)*70; // MN Reward: %70
     return ret;
 }
 

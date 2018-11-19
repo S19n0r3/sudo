@@ -97,17 +97,17 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = "main";
-        consensus.nSubsidyHalvingInterval = 525600; // Note: actual number of blocks per 3 calendar years of halving
-        consensus.nMasternodePaymentsStartBlock = 7200; // It's less then nMasternodePaymentsIncreaseBlock
+        consensus.nSubsidyHalvingInterval = 1752000; // Note: actual number of blocks per 10 calendar years of halving
+        consensus.nMasternodePaymentsStartBlock = 8640; // It's less then nMasternodePaymentsIncreaseBlock
         consensus.nMasternodePaymentsIncreaseBlock = 14400; //20*24*30
-        consensus.nMasternodePaymentsIncreasePeriod = 14600;//175200/12
+        consensus.nMasternodePaymentsIncreasePeriod = 14600; //175200/12
         consensus.nInstantSendConfirmationsRequired = 6;
         consensus.nInstantSendKeepLock = 24;
-        consensus.nBudgetPaymentsStartBlock = 14400;//20*24*30
-        consensus.nBudgetPaymentsCycleBlocks = 14600;// 175200/12
+        consensus.nBudgetPaymentsStartBlock = 14400; //20*24*30
+        consensus.nBudgetPaymentsCycleBlocks = 14600; // 175200/12
         consensus.nBudgetPaymentsWindowBlocks = 100;
-        consensus.nSuperblockStartBlock = 43800;// (175200/12)*3
-        consensus.nSuperblockCycle = 14600;// 175200/12
+        consensus.nSuperblockStartBlock = 43800; // (175200/12)*3
+        consensus.nSuperblockCycle = 14600; // 175200/12
         //consensus.nSuperblockStartHash = uint256S("0x00");
         consensus.nGovernanceMinQuorum = 10;
         consensus.nGovernanceFilterElements = 20000;
