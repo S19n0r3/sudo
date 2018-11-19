@@ -1,3 +1,5 @@
+Dash Core version 0.12.3.5
+==========================
 Dash Core version 0.12.3.4
 ==========================
 Dash Core version 0.12.3.3
@@ -50,6 +52,8 @@ Fix crash bug with duplicate inputs within a transaction
 
 There was a critical bug discovered in Bitcoin Core's codebase recently which
 can cause node receiving a block to crash https://github.com/bitcoin/bitcoin/pull/14247
+0.12.3.5 Change log
+===================
 0.12.3.4 Change log
 ===================
 0.12.3.3 Change log
